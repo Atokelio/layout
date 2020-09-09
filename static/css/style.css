@@ -112,7 +112,9 @@ a {
     text-transform: none;
     color: #030505;
     font-size: 16px;
-    cursor: pointer; }
+    cursor: pointer;
+    font-family: inherit;
+  }
   .modal-form__success-message {
     color: #fff;
     text-align: center;
