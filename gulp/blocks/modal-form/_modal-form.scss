@@ -30,14 +30,13 @@
   }
 
   &__button {
-    font-family: inherit;
     padding: 9px 17px;
     border: none;
     text-transform: none;
     color: $color-darkest;
+    font-family: inherit;
     font-size: 16px;
     cursor: pointer;
-    font-family: inherit;
   }
 
   &__success-message {
