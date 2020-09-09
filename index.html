@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daybreaker</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="body">
+  <header class="header">
+    <div class="header__logo">
+      <img src="static/img/hub-logo.svg" alt="Logo">
+    </div>
+    <div class="header__info">
+      <a class="header__info-link link" href="sms:+19175405454">text us at 917-540-5454</a>
+      <div class="social">
+        <a href="#" class="header__social-link social__link"><img src="static/img/instagram-logo.svg" alt="Instagram"></a>
+        <a href="#" class="header__social-link social__link"><img src="static/img/facebook-logo.svg" alt="Facebook"></a>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="screen main__screen-left">
+      <div class="screen__content">
+        <div class="screen__title">Wake up</div>
+        <a class="screen__button button button--bordered" href="#">Join the club</a>
+      </div>
+      <div class="screen__hidden">
+        <div class="screen__content">
+          <div class="screen__title">Meet us</div>
+          <div class="screen__text-bottom-block">
+            get tickets to daybreaker <br>virtual + in-person community events <br><br>
+            <small>inquire re: private & bespoke events</small> <br>
+            <small>partners@daybreaker.com</small>
+          </div>
+        </div>
+      </div>
+      <div class="screen__video">
+        <video id="left-video" autoplay loop muted playsinline poster="./cover-image.jpg"
+               src="https://staging.daybreaker.com/wp-content/themes/dybrkr-with-hub/video/join-compressed.mp4"></video>
+      </div>
+    </div>
+    <div class="screen main__screen-right">
+      <div class="screen__content">
+        <div class="screen__title">& Dance</div>
+        <a class="screen__button button button--bordered" href="#">Find events</a>
+      </div>
+      <div class="screen__hidden">
+        <div class="screen__content">
+          <div class="screen__text-top-block">coming soon...</div>
+          <div class="screen__title">& D.O.S.E.</div>
+          <div class="screen__text-bottom-block">
+            livestream and on demand <br>
+            dose by daybreaker classes <br>
+            private member-only events <br>
+            biohack your happiness
+          </div>
+        </div>
+      </div>
+      <div class="screen__video">
+        <video id="right-video" autoplay loop muted playsinline poster="./cover-image.jpg"
+               src="https://staging.daybreaker.com/wp-content/themes/dybrkr-with-hub/video/find-events-compressed.mp4"></video>
+      </div>
+      <div class="main__mobile-block">
+        <a href="#" class="button main__mobile-block-button">Join the club</a>
+        <a href="#" class="button main__mobile-block-button">Find events</a>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__text">
+      <div class="footer__text-label">for private & bespoke events</div>
+      <a class="footer__text-link link" href="mailto:partners@daybreaker.com">partners@daybreaker.com</a>
+    </div>
+    <div class="footer__text">
+      <div class="footer__text-label">join our community</div>
+      <a class="link footer__text-link" href="sms:+19175405454">text us at 917-540-5454</a>
+    </div>
+    <div class="footer__social social">
+      <a href="#" class="footer__social-link social__link"><img src="static/img/instagram-logo.svg" alt="Instagram"></a>
+      <a href="#" class="footer__social-link social__link"><img src="static/img/facebook-logo.svg" alt="Facebook"></a>
+    </div>
+  </footer>
+  <div class="modal">
+    <div class="modal__close-button">
+      <img src="static/img/close.svg" alt="X">
+    </div>
+    <div class="modal__content">
+      <div class="modal__logo">
+        <img src="static/img/daybreaker-logo.svg" alt="logo">
+      </div>
+      <div class="modal__title">Unlock your invite to our first-ever Daybreaker Membership Club.</div>
+      <ul class="modal__list">
+        <li>Sign up to join the launch of our new D.O.S.E. by Daybreaker membership portal as a Founding Member</li>
+        <li>Biohack your happiness with fun on-demand  dance, yoga, meditation and special Daybreaker classes.</li>
+        <li>Connect to the community with members-only virtual dance parties, monthly private social hours, quarterly book clubs and more...</li>
+      </ul>
+      <div class="modal-form">
+          <form action="" id="email-form">
+              <input required type="email" class="modal-form__email-input" tabindex="1" placeholder="Drop your email">
+              <input type="hidden" name="g" value="">
+              <input type="hidden" name="$fields" value="user_city,user_ip,signup_location">
+              <input type="hidden" name="user_city" value="">
+              <input type="hidden" name="user_ip" value="">
+              <input type="hidden" name="signup_location" value="">
+              <div class="modal-form__button-container">
+                <button type="submit" class="modal-form__button button" role="button" tabindex="2">Get on the list</button>
+              </div>
+          </form>
+          <div id="subscribe-successful" style="display: none;" class="modal-form__success-message">
+            <div>You’re in! Check your inbox.</div>
+          </div>
+      </div>
+  </div>
+<script src="static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.button {
+  display: inline-block;
+  text-transform: uppercase;
+  color: $color-black;
+  padding: 12px 25px;
+  background-color: $color-main;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.button--bordered {
+  border: 3px solid #a0ffde;
+  color: #fff;
+  background-color: transparent;
+}
+
+.button--bordered:hover {
+  background-color: $color-main;
+  color: $color-black;
+}

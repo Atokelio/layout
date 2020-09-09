@@ -1,0 +1,47 @@
+.modal-form {
+  max-width: 210px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+
+  @media (min-width: $screen-xs) {
+    max-width: 260px;
+  }
+
+  &__email-input {
+    font-family: inherit;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid $color-main;
+    text-align: center;
+    padding-bottom: 5px;
+    color: $color-white;
+    font-size: 16px;
+  }
+
+  &__email-input:focus {
+    color: $color-white;
+  }
+
+  &__button-container {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  &__button {
+    padding: 9px 17px;
+    border: none;
+    text-transform: none;
+    color: $color-darkest;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  &__success-message {
+    color: $color-white;
+    text-align: center;
+    white-space: nowrap;
+    padding-bottom: 10px;
+  }
+}

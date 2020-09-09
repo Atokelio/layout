@@ -1,0 +1,33 @@
+/* custom fonts */
+
+@font-face {
+    font-family: 'AkkuratPro';
+    src: url('../fonts/AkkuratPro/AkkuratPro-Regular.woff') format('woff'),
+         url('../fonts/AkkuratPro/AkkuratPro-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkkuratPro';
+    src: url('../fonts/AkkuratPro/AkkuratPro-Bold.woff') format('woff'),
+         url('../fonts/AkkuratPro/AkkuratPro-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akkurat';
+    src: url('../fonts/Akkurat/akkurat_bold-webfont.woff') format('woff'),
+         url('../fonts/Akkurat/akkurat_bold-webfont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akkurat';
+    src: url('../fonts/Akkurat/akkurat_italic-webfont.woff') format('woff'),
+         url('../fonts/Akkurat/akkurat_italic-webfont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
