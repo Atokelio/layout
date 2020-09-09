@@ -97,7 +97,6 @@ $(document).ready(function () {
 
     $('#email-form').submit(function () {
         setSuccessfulSubscribed(true)
-        $('#email-input').val('').change()
     })
 
 })
