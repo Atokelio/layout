@@ -14,16 +14,18 @@
     <div class="header__info">
       <a class="header__info-link link" href="sms:+19175405454">text us at 917-540-5454</a>
       <div class="social">
-        <a href="#" class="header__social-link social__link"><img src="static/img/instagram-logo.svg" alt="Instagram"></a>
-        <a href="#" class="header__social-link social__link"><img src="static/img/facebook-logo.svg" alt="Facebook"></a>
+        <a href="https://instagram.com/dybrkr" class="header__social-link social__link"><img
+                src="static/img/instagram-logo.svg" alt="Instagram"></a>
+        <a href="https://facebook.com/dybrkr" class="header__social-link social__link"><img
+                src="static/img/facebook-logo.svg" alt="Facebook"></a>
       </div>
     </div>
   </header>
   <main class="main">
-    <div class="screen main__screen-left">
+    <div class="screen main__screen-left" id="left-screen">
       <div class="screen__content">
         <div class="screen__title">Wake up</div>
-        <a class="screen__button button button--bordered" href="#">Join the club</a>
+        <a class="screen__button button button--bordered" id="left-button" href="#">Join the club</a>
       </div>
       <div class="screen__hidden">
         <div class="screen__content">
@@ -36,14 +38,15 @@
         </div>
       </div>
       <div class="screen__video">
-        <video id="left-video" autoplay loop muted playsinline poster="./cover-image.jpg"
+        <video id="left-video" autoplay loop muted playsinline
                src="https://staging.daybreaker.com/wp-content/themes/dybrkr-with-hub/video/join-compressed.mp4"></video>
       </div>
     </div>
-    <div class="screen main__screen-right">
+    <div class="screen main__screen-right" id="right-screen">
       <div class="screen__content">
         <div class="screen__title">& Dance</div>
-        <a class="screen__button button button--bordered" href="#">Find events</a>
+        <a class="screen__button button button--bordered" id="right-button" href="https://www.daybreaker.com/">Find
+          events</a>
       </div>
       <div class="screen__hidden">
         <div class="screen__content">
@@ -58,12 +61,12 @@
         </div>
       </div>
       <div class="screen__video">
-        <video id="right-video" autoplay loop muted playsinline poster="./cover-image.jpg"
+        <video id="right-video" autoplay loop muted playsinline
                src="https://staging.daybreaker.com/wp-content/themes/dybrkr-with-hub/video/find-events-compressed.mp4"></video>
       </div>
       <div class="main__mobile-block">
-        <a href="#" class="button main__mobile-block-button">Join the club</a>
-        <a href="#" class="button main__mobile-block-button">Find events</a>
+        <a href="#" class="button main__mobile-block-button" id="top-button">Join the club</a>
+        <a href="https://www.daybreaker.com/" class="button main__mobile-block-button">Find events</a>
       </div>
     </div>
   </main>
@@ -77,23 +80,27 @@
       <a class="link footer__text-link" href="sms:+19175405454">text us at 917-540-5454</a>
     </div>
     <div class="footer__social social">
-      <a href="#" class="footer__social-link social__link"><img src="static/img/instagram-logo.svg" alt="Instagram"></a>
-      <a href="#" class="footer__social-link social__link"><img src="static/img/facebook-logo.svg" alt="Facebook"></a>
+      <a href="https://instagram.com/dybrkr" class="footer__social-link social__link"><img
+              src="static/img/instagram-logo.svg" alt="Instagram"></a>
+      <a href="https://facebook.com/dybrkr" class="footer__social-link social__link"><img
+              src="static/img/facebook-logo.svg" alt="Facebook"></a>
     </div>
   </footer>
-  <div class="modal">
-    <div class="modal__close-button">
+  <div class="modal" id="modal">
+    <div class="modal__close-button" id="modal-close">
       <img src="static/img/close.svg" alt="X">
     </div>
-    <div class="modal__content">
+    <div class="modal__content" id="modal-content">
       <div class="modal__logo">
         <img src="static/img/daybreaker-logo.svg" alt="logo">
       </div>
       <div class="modal__title">Unlock your invite to our first-ever Daybreaker Membership Club.</div>
       <ul class="modal__list">
         <li>Sign up to join the launch of our new D.O.S.E. by Daybreaker membership portal as a Founding Member</li>
-        <li>Biohack your happiness with fun on-demand  dance, yoga, meditation and special Daybreaker classes.</li>
-        <li>Connect to the community with members-only virtual dance parties, monthly private social hours, quarterly book clubs and more...</li>
+        <li>Biohack your happiness with fun on-demand dance, yoga, meditation and special Daybreaker classes.</li>
+        <li>Connect to the community with members-only virtual dance parties, monthly private social hours, quarterly
+          book clubs and more...
+        </li>
       </ul>
       <div class="modal-form">
           <form action="" id="email-form">
@@ -112,13 +119,12 @@
           </div>
       </div>
   </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="static/js/script.js"></script>
+
   </div>
-  <div class="loading-overlay" style="display: none;">
+  <div class="loading-overlay" id="loading-overlay">
     <img src="static/img/daybreaker-logo.svg" alt="loading">
   </div>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="static/js/script.js"></script>
 </body>
 </html>

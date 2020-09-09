@@ -1,9 +1,8 @@
 const mobileBreakpoint = 992
 
 function stopVideo(name) {
-    const video = $(`#${name}-video`).get(0).
-    video.pause()
-    video.currentTime = 0
+    $(`#${name}-video`).get(0).pause()
+    $(`#${name}-video`).get(0).currentTime = 0
 }
 
 function playVideo(name) {
@@ -42,7 +41,7 @@ function showPage() {
 
 
 window.onload = function () {
-    isDesktop = $(window).width() >= mobileBreakpoint
+    const isDesktop = $(window).width() >= mobileBreakpoint
     setModal(false);
     if (isDesktop) {
         $('#left-video').attr('src', 'https://staging.daybreaker.com/wp-content/themes/dybrkr-with-hub/video/join-compressed.mp4')
@@ -57,7 +56,12 @@ window.onload = function () {
 
 //POP UP
 function setModal(flag) {
-    setElementDisplaying(flag, 'modal')
+    if (flag) {
+        $('#modal').addClass('active')
+    } else {
+        $('#modal').removeClass('active')
+    }
+
 }
 
 function setSuccessfulSubscribed(flag) {
@@ -69,16 +73,19 @@ $(document).ready(function () {
     $('#left-button').click(function () {
         setModal(true)
     })
+    $('#top-button').click(function () {
+        setModal(true)
+    })
 
-    $('.popup-bg').click(function () {
+    $('#modal').click(function () {
         setModal(false)
     })
 
-    $('#popup-close').click(function () {
+    $('#modal-close').click(function () {
         setModal(false)
     })
 
-    $('.popup-window').click(function (event) {
+    $('#modal-content').click(function (event) {
         event.stopPropagation()
     })
 
@@ -130,12 +137,7 @@ $(document).ready(function () {
     $('#left-button').mouseout(function () {
         const isDesktop = $(window).width() >= mobileBreakpoint;
         if (isDesktop) {
-            e = event.toElement || event.relatedTarget;
-            if (e == this || e == $('#left-button').get(0)) {
-                return;
-            }
-            $('#outbound-block-right').removeClass('active')
-            $('#left-button').removeClass('button-hover')
+            $('#right-screen').removeClass('active')
             stopVideo('left')
 
         }
@@ -144,22 +146,16 @@ $(document).ready(function () {
     $('#left-button').mouseover(function () {
         const isDesktop = $(window).width() >= mobileBreakpoint;
         if (isDesktop) {
-            $('#outbound-block-right').addClass('active')
-            $('#left-button').addClass('button-hover')
+            $('#right-screen').addClass('active')
             playVideo('left')
         }
     })
 
     //Left Block animation
-    $('#right-button').mouseout(function (event) {
+    $('#right-button').mouseout(function () {
         const isDesktop = $(window).width() >= mobileBreakpoint;
         if (isDesktop) {
-            e = event.toElement || event.relatedTarget;
-            if (e == this || e == $('#right-button').get(0)) {
-                return;
-            }
-            $('#outbound-block-left').removeClass('active')
-            $('#right-button').removeClass('button-hover')
+            $('#left-screen').removeClass('active')
             stopVideo('right')
         }
     })
@@ -167,9 +163,7 @@ $(document).ready(function () {
     $('#right-button').mouseover(function () {
         const isDesktop = $(window).width() >= mobileBreakpoint;
         if (isDesktop) {
-
-            $('#outbound-block-left').addClass('active')
-            $('#right-button').addClass('button-hover')
+            $('#left-screen').addClass('active')
             playVideo('right')
         }
     })
