@@ -23,7 +23,7 @@
     <div class="screen main__screen-left">
       <div class="screen__content">
         <div class="screen__title">Wake up</div>
-        <a class="screen__button button button--bordered" id="left-button" href="#">Join the club</a>
+        <a class="screen__button button button--bordered" href="#">Join the club</a>
       </div>
       <div class="screen__hidden">
         <div class="screen__content">
@@ -36,14 +36,14 @@
         </div>
       </div>
       <div class="screen__video">
-        <video id="left-video" autoplay loop muted playsinline
+        <video id="left-video" autoplay loop muted playsinline poster="./cover-image.jpg"
                src="https://staging.daybreaker.com/wp-content/themes/dybrkr-with-hub/video/join-compressed.mp4"></video>
       </div>
     </div>
     <div class="screen main__screen-right">
       <div class="screen__content">
         <div class="screen__title">& Dance</div>
-        <a class="screen__button button button--bordered" id="right-button" href="#">Find events</a>
+        <a class="screen__button button button--bordered" href="#">Find events</a>
       </div>
       <div class="screen__hidden">
         <div class="screen__content">
@@ -58,7 +58,7 @@
         </div>
       </div>
       <div class="screen__video">
-        <video id="right-video" autoplay loop muted playsinline
+        <video id="right-video" autoplay loop muted playsinline poster="./cover-image.jpg"
                src="https://staging.daybreaker.com/wp-content/themes/dybrkr-with-hub/video/find-events-compressed.mp4"></video>
       </div>
       <div class="main__mobile-block">
@@ -81,7 +81,7 @@
       <a href="#" class="footer__social-link social__link"><img src="static/img/facebook-logo.svg" alt="Facebook"></a>
     </div>
   </footer>
-  <div class="modal" id="modal">
+  <div class="modal">
     <div class="modal__close-button">
       <img src="static/img/close.svg" alt="X">
     </div>
@@ -114,5 +114,11 @@
   </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="static/js/script.js"></script>
+  </div>
+  <div class="loading-overlay" style="display: none;">
+    <img src="static/img/daybreaker-logo.svg" alt="loading">
+  </div>
+
+  <script src="static/js/script.js"></script>
 </body>
 </html>
