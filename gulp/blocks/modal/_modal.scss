@@ -14,6 +14,46 @@
     display: block;
   }
 
+  &__frame {
+    position: absolute;
+    bottom: 33px;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 155px);
+    border: 2px solid $color-white;
+
+    @media (min-width: $screen-xs) {
+      left: 20px;
+      width: calc(100% - 40px);
+    }
+
+    @media (min-width: $screen-lg) {
+      left: 35px;
+      width: calc(100% - 70px);
+      height: calc(100% - 176px);
+    }
+  }
+
+  &__frame-inner {
+    position: relative;
+
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: 28px;
+      width: calc(100% - 56px);
+      height: 5px;
+      background-color: $color-green;
+
+      @media (min-width: $screen-lg) {
+        left: 42px;
+        width: calc(100% - 84px);
+      }
+    }
+  }
+
   &__close-button {
     position: absolute;
     top: 25px;
@@ -34,8 +74,9 @@
   }
 
   &__content {
+    position: relative;
     max-width: 320px;
-    padding: 40px 0 30px;
+    padding: 30px 0 30px;
     background: url("../img/modal-bg-mobile.png") no-repeat;
     background-size: 100% 100%;
     margin: 0 auto;
@@ -46,10 +87,14 @@
 
     @media (min-width: $screen-lg) {
       max-width: 525px;
-      padding-top: 45px;
       background: url("../img/modal-bg.png") no-repeat;
       background-size: 100% 100%;
     }
+  }
+
+  &__content-inner {
+    position: relative;
+    z-index: 2;
   }
 
   &__logo {
