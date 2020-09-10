@@ -1,4 +1,5 @@
 .main {
+  min-height: 300px;
   height: calc(100vh - 240px);
 
   @media (min-width: $screen-lg) {
