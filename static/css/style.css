@@ -115,6 +115,8 @@ a {
     font-family: inherit;
     font-size: 16px;
     cursor: pointer; }
+  .modal-form__button:hover {
+    background-color: white; }
   .modal-form__success-message {
     color: #fff;
     text-align: center;
@@ -270,7 +272,7 @@ a {
       .main__mobile-block {
         display: none; } }
     .main__mobile-block .button {
-      min-width: 230px;
+      min-width: 280px;
       margin-bottom: 15px; }
       .main__mobile-block .button:last-child {
         margin-bottom: 0; }
