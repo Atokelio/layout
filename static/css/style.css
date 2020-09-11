@@ -206,7 +206,8 @@ a {
     font-size: 12px;
     text-transform: uppercase;
     color: #fff;
-    margin-bottom: 8px; }
+    margin-bottom: 8px;
+    letter-spacing: .125em; }
   .footer__social {
     display: -webkit-box;
     display: -ms-flexbox;
