@@ -1,8 +1,8 @@
 const mobileBreakpoint = 992
 
-function setElementDisplaying(isDisplaying, id) {
+function setElementDisplaying(flag, id) {
     const element = document.getElementById(id);
-    if (isDisplaying) {
+    if (flag) {
         element.style.cssText = ""
     } else {
         element.style.cssText = "display: none;"
@@ -13,27 +13,8 @@ function disablePreloader() {
     setElementDisplaying(false, 'loading-overlay')
 }
 
-function showPage() {
-    disablePreloader()
-}
 
-window.onload = function () {
-    const isDesktop = $(window).width() >= mobileBreakpoint
-    setModal(false);
-    setElementDisplaying(isDesktop, 'left-video');
-
-    if (isDesktop) {
-        $('#left-video').attr('src', 'https://staging.daybreaker.com/wp-content/themes/dybrkr-with-hub/video/join-compressed.mp4')
-        $('#right-video').attr('src', 'https://staging.daybreaker.com/wp-content/themes/dybrkr-with-hub/video/find-events-compressed.mp4')
-
-    } else {
-        $('#left-video').attr('src', 'https://staging.daybreaker.com/wp-content/themes/dybrkr-with-hub/video/join-compressed.mp4')
-        $('#right-video').attr('src', 'https://staging.daybreaker.com/wp-content/themes/dybrkr-with-hub/video/find-events-compressed.mp4')
-        showPage()
-    }
-}
-
-$(window).resize(function (){
+$(window).resize(function () {
     const isDesktop = $(window).width() >= mobileBreakpoint
     setElementDisplaying(isDesktop, 'left-video');
 })
@@ -51,6 +32,28 @@ function setModal(isDisplaying) {
 function setSuccessfulSubscribed(isDisplaying) {
     setElementDisplaying(isDisplaying, 'subscribe-successful')
 }
+
+$(document).ready(function () {
+    //Video ready preloader
+    let start = null;
+    function step(timestamp) {
+        if (!start) start = timestamp;
+        let progress = timestamp - start;
+        const isDesktop = $(window).width() >= mobileBreakpoint
+
+        if ((!document.getElementById('left-video').paused || !isDesktop)
+            && !document.getElementById('right-video').paused) {
+            setModal(false)
+            setElementDisplaying(isDesktop, 'left-video');
+            disablePreloader()
+            return
+        }
+        window.requestAnimationFrame(step)
+    }
+
+    window.requestAnimationFrame(step)
+
+})
 
 $(document).ready(function () {
     $('#left-button').click(function () {
@@ -80,31 +83,10 @@ $(document).ready(function () {
 
 //Video control and Animations
 $(document).ready(function () {
-    //Video ready preloader
-    let isLeftVideoReady = false;
-    let isRightVideoReady = false;
-    let isPageReady = false;
+
 
     const isDesktop = $(window).width() >= mobileBreakpoint;
-    $('#left-video').bind('timeupdate', function () {
-        if (this.currentTime > 0.01) {
-            isLeftVideoReady = true;
-            if (isRightVideoReady && isPageReady == false) {
-                showPage()
-                isPageReady = true
-            }
-        }
-    })
 
-    $('#right-video').bind('timeupdate', function () {
-        if (this.currentTime > 0.01) {
-            isRightVideoReady = true;
-            if (isLeftVideoReady && isPageReady == false) {
-                showPage()
-                isPageReady = true
-            }
-        }
-    })
 
     //Right Block animation
     $('#left-button').mouseout(function () {
@@ -137,5 +119,3 @@ $(document).ready(function () {
     })
 
 })
-
-
