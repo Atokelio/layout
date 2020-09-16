@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const rcs = require('gulp-rcs');
 // const browserSync = require('browser-sync').create();
 
 function styles() {
@@ -26,3 +27,9 @@ function watch() {
 
 gulp.task('styles', styles);
 gulp.task('watch', watch);
+
+gulp.task('all', () => {
+  return gulp.src(['./static/**/*.css', './static/**/*.js', './*.html'])
+    .pipe(rcs())
+    .pipe(gulp.dest('./dist/'));
+});

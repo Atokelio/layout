@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "rename-css-selectors": "^3.3.0"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0",
+    "gulp-rcs": "^2.0.1",
     "gulp-sass": "^4.0.2"
   },
   "scripts": {

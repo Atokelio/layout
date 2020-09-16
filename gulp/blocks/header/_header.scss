@@ -5,6 +5,7 @@
   height: 80px;
   padding: 27px 0;
   z-index: 10;
+  opacity: 1!important;
 
   @media (min-width: $screen-lg) {
     display: flex;
@@ -40,6 +41,9 @@
 
   &__info-link {
     margin-right: 20px;
+  }
+  &__info-link:hover{
+    color: #a0ffde;
   }
 
   &__social-link {

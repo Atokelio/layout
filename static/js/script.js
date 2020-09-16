@@ -10,21 +10,21 @@ function setElementDisplaying(flag, id) {
 }
 
 function disablePreloader() {
-    setElementDisplaying(false, 'loading-overlay')
+    setElementDisplaying(false, 'loading-overlay_hub')
 }
 
 
 $(window).resize(function () {
     const isDesktop = $(window).width() >= mobileBreakpoint
-    setElementDisplaying(isDesktop, 'left-video');
+    setElementDisplaying(isDesktop, 'left-video_hub');
 })
 
 //POP UP
 function setModal(isDisplaying) {
     if (isDisplaying) {
-        $('#modal').addClass('active')
+        $('#modal_hub').addClass('active')
     } else {
-        $('#modal').removeClass('active')
+        $('#modal_hub').removeClass('active')
     }
 
 }
@@ -41,10 +41,10 @@ $(document).ready(function () {
         let progress = timestamp - start;
         const isDesktop = $(window).width() >= mobileBreakpoint
 
-        if ((!document.getElementById('left-video').paused || !isDesktop)
-            && !document.getElementById('right-video').paused) {
+        if ((!document.getElementById('left-video_hub').paused || !isDesktop)
+            && !document.getElementById('right-video_hub').paused) {
             setModal(false)
-            setElementDisplaying(isDesktop, 'left-video');
+            setElementDisplaying(isDesktop, 'left-video_hub');
             disablePreloader()
             return
         }
@@ -56,26 +56,26 @@ $(document).ready(function () {
 })
 
 $(document).ready(function () {
-    $('#left-button').click(function () {
+    $('#left-button_hub').click(function () {
         setModal(true)
     })
-    $('#top-button').click(function () {
+    $('#top-button_hub').click(function () {
         setModal(true)
     })
 
-    $('#modal').click(function () {
+    $('#modal_hub').click(function () {
         setModal(false)
     })
 
-    $('#modal-close').click(function () {
+    $('#modal-close_hub').click(function () {
         setModal(false)
     })
 
-    $('#modal-content').click(function (event) {
+    $('#modal-content_hub').click(function (event) {
         event.stopPropagation()
     })
 
-    $('#email-form').submit(function () {
+    $('#email-form_hub').submit(function () {
         setSuccessfulSubscribed(true)
     })
 
@@ -89,32 +89,32 @@ $(document).ready(function () {
 
 
     //Right Block animation
-    $('#left-button').mouseout(function () {
+    $('#left-button_hub').mouseout(function () {
         const isDesktop = $(window).width() >= mobileBreakpoint;
         if (isDesktop) {
-            $('#right-screen').removeClass('active')
+            $('#right-screen_hub').removeClass('active')
         }
     })
 
-    $('#left-button').mouseover(function () {
+    $('#left-button_hub').mouseover(function () {
         const isDesktop = $(window).width() >= mobileBreakpoint;
         if (isDesktop) {
-            $('#right-screen').addClass('active')
+            $('#right-screen_hub').addClass('active')
         }
     })
 
     //Left Block animation
-    $('#right-button').mouseout(function () {
+    $('#right-button_hub').mouseout(function () {
         const isDesktop = $(window).width() >= mobileBreakpoint;
         if (isDesktop) {
-            $('#left-screen').removeClass('active')
+            $('#left-screen_hub').removeClass('active')
         }
     })
 
-    $('#right-button').mouseover(function () {
+    $('#right-button_hub').mouseover(function () {
         const isDesktop = $(window).width() >= mobileBreakpoint;
         if (isDesktop) {
-            $('#left-screen').addClass('active')
+            $('#left-screen_hub').addClass('active')
         }
     })
 

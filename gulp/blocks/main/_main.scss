@@ -60,5 +60,9 @@
         margin-bottom: 0;
       }
     }
+    .button:hover{
+      color: black;
+      background-color: $color-main;
+    }
   }
 }
