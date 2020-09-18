@@ -30,7 +30,7 @@ function setModal(isDisplaying) {
 }
 
 function setSuccessfulSubscribed(isDisplaying) {
-    setElementDisplaying(isDisplaying, 'subscribe-successful')
+    setElementDisplaying(isDisplaying, 'subscribe-successful_hub')
 }
 
 $(document).ready(function () {
@@ -75,7 +75,7 @@ $(document).ready(function () {
         event.stopPropagation()
     })
 
-    $('#email-form_hub').submit(function () {
+    $('#email-form').submit(function () {
         setSuccessfulSubscribed(true)
     })
 
