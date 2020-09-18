@@ -101,13 +101,22 @@ a {
     border: none;
     border-bottom: 2px solid #a0ffde;
     text-align: center;
+    padding: inherit;
+    display: inline-block;
     padding-bottom: 5px;
     color: #fff;
     font-size: 16px;
     -webkit-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none;
+    margin: 0;
+    height: auto; }
   .modal-form__email-input:focus {
-    color: #fff; }
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #a0ffde;
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
   .modal-form__button-container {
     padding: 20px 0 30px;
     text-align: center; }

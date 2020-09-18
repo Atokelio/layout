@@ -14,14 +14,23 @@
     border: none;
     border-bottom: 2px solid $color-main;
     text-align: center;
+    padding: inherit;
+    display: inline-block;
     padding-bottom: 5px;
     color: $color-white;
     font-size: 16px;
+    -webkit-box-shadow: none;
     box-shadow: none;
+    margin: 0;
+    height: auto;
   }
 
   &__email-input:focus {
     color: $color-white;
+    border: none;
+    border-bottom: 2px solid #a0ffde;
+    background: transparent;
+    box-shadow: none;
   }
 
   &__button-container {
@@ -40,7 +49,7 @@
     transition: background-color 0.3s;
   }
 
-  &__button:hover{
+  &__button:hover {
     background-color: white;
   }
 
