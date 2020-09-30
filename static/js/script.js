@@ -63,10 +63,6 @@ $(document).ready(function () {
         setModal(true)
     })
 
-    $('#modal_hub').click(function () {
-        setModal(false)
-    })
-
     $('#modal-close_hub').click(function () {
         setModal(false)
     })
@@ -77,6 +73,7 @@ $(document).ready(function () {
 
     $('#email-form').submit(function () {
         setSuccessfulSubscribed(true)
+        $('#modal-button_hub').addClass('active')
     })
 
 })
