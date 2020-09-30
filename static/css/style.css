@@ -455,9 +455,7 @@ a {
     font-style: italic; }
 
 .modal-dialog {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -471,6 +469,10 @@ a {
   background-size: cover;
   padding: 120px 0;
   overflow-y: auto; }
+  .modal-dialog.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
   @media (min-width: 992px) {
     .modal-dialog {
       -webkit-box-align: center;

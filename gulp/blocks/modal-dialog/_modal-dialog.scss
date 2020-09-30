@@ -1,5 +1,5 @@
 .modal-dialog {
-  display: flex;
+  display: none;
   justify-content: center;
   position: fixed;
   top: 0;
@@ -11,6 +11,10 @@
   background-size: cover;
   padding: 120px 0;
   overflow-y: auto;
+
+  &.active {
+    display: flex;
+  }
 
   @media (min-width: $screen-lg) {
     align-items: center;
