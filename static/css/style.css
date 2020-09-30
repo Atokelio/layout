@@ -133,6 +133,8 @@ a {
       text-transform: uppercase;
       letter-spacing: 1.8px; }
   .modal-dialog-form__email-input:focus {
+    border: none;
+    border-bottom: 2px solid #fff;
     color: #fff;
     background: transparent;
     -webkit-box-shadow: none;
@@ -141,9 +143,27 @@ a {
     padding: 30px 0;
     text-align: center; }
   .modal-dialog-form__button {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 12px 25px;
+    background-color: transparent;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    cursor: pointer;
     width: 280px;
     height: 55px;
-    font-size: 16px; }
+    border: 3px solid #a0ffde; }
+    .modal-dialog-form__button:hover {
+      background-color: #a0ffde;
+      color: #000; }
+    .modal-dialog-form__button:active, .modal-dialog-form__button:focus {
+      color: #000;
+      background-color: #fff;
+      border-color: #fff;
+      outline: none; }
   .modal-dialog-form__button.active {
     color: #fff;
     background-color: transparent;
@@ -152,11 +172,16 @@ a {
     position: absolute;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    bottom: -10px;
+    bottom: -5px;
     left: 50%;
     color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
     text-align: center;
-    white-space: nowrap; }
+    white-space: nowrap;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 1.5px; }
 
 .social {
   display: -webkit-box;
