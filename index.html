@@ -86,43 +86,74 @@
               src="static/img/facebook-logo.svg" alt="Facebook"></a>
     </div>
   </footer>
-  <div class="modal active" id="modal_hub">
-    <div class="modal__close-button" id="modal-close_hub">
+<!--  <div class="modal active" id="modal_hub">-->
+<!--    <div class="modal__close-button" id="modal-close_hub">-->
+<!--      <img src="static/img/close.svg" alt="X">-->
+<!--    </div>-->
+<!--    <div class="modal__content" id="modal-content_hub">-->
+<!--      <div class="modal__frame"><div class="modal__frame-inner"></div></div>-->
+<!--      <div class="modal__content-inner">-->
+<!--        <div class="modal__logo">-->
+<!--        <img src="static/img/daybreaker-logo.svg" alt="logo">-->
+<!--      </div>-->
+<!--        <div class="modal__title">Unlock your invite to our first-ever Daybreaker Membership Club.</div>-->
+<!--        <ul class="modal__list">-->
+<!--          <li>Sign up to join the launch of our new D.O.S.E. by Daybreaker membership portal as a Founding Member.</li>-->
+<!--          <li>Biohack your happiness with fun on-demand dance, yoga, meditation and special Daybreaker classes.</li>-->
+<!--          <li>Connect to the community with members-only virtual dance parties, monthly private social hours, quarterly-->
+<!--            book clubs and more...-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--        <div class="modal-form">-->
+<!--            <form action="" id="email-form">-->
+<!--                <input required type="email" class="modal-form__email-input" tabindex="1" placeholder="Drop your email">-->
+<!--                <input type="hidden" name="g" value="">-->
+<!--                <input type="hidden" name="$fields" value="user_city,user_ip,signup_location">-->
+<!--                <input type="hidden" name="user_city" value="">-->
+<!--                <input type="hidden" name="user_ip" value="">-->
+<!--                <input type="hidden" name="signup_location" value="">-->
+<!--                <div class="modal-form__button-container">-->
+<!--                  <button type="submit" class="modal-form__button button" role="button" tabindex="2">Get on the list</button>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--            <div id="subscribe-successful_hub" style="display: none;" class="modal-form__success-message">-->
+<!--              <div>You’re in! Check your inbox.</div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--  </div>-->
+
+<!--  </div>-->
+  <div class="modal-dialog" id="modal_hub">
+    <div class="modal-dialog__close-button" id="modal-close_hub">
       <img src="static/img/close.svg" alt="X">
     </div>
-    <div class="modal__content" id="modal-content_hub">
-      <div class="modal__frame"><div class="modal__frame-inner"></div></div>
-      <div class="modal__content-inner">
-        <div class="modal__logo">
-        <img src="static/img/daybreaker-logo.svg" alt="logo">
+    <div class="modal-dialog__content" id="modal-content_hub">
+      <div class="modal-dialog__img">
+        <img src="static/img/door.png" alt="door">
       </div>
-        <div class="modal__title">Unlock your invite to our first-ever Daybreaker Membership Club.</div>
-        <ul class="modal__list">
-          <li>Sign up to join the launch of our new D.O.S.E. by Daybreaker membership portal as a Founding Member.</li>
-          <li>Biohack your happiness with fun on-demand dance, yoga, meditation and special Daybreaker classes.</li>
-          <li>Connect to the community with members-only virtual dance parties, monthly private social hours, quarterly
-            book clubs and more...
-          </li>
-        </ul>
-        <div class="modal-form">
-            <form action="" id="email-form">
-                <input required type="email" class="modal-form__email-input" tabindex="1" placeholder="Drop your email">
-                <input type="hidden" name="g" value="">
-                <input type="hidden" name="$fields" value="user_city,user_ip,signup_location">
-                <input type="hidden" name="user_city" value="">
-                <input type="hidden" name="user_ip" value="">
-                <input type="hidden" name="signup_location" value="">
-                <div class="modal-form__button-container">
-                  <button type="submit" class="modal-form__button button" role="button" tabindex="2">Get on the list</button>
-                </div>
-            </form>
-            <div id="subscribe-successful_hub" style="display: none;" class="modal-form__success-message">
-              <div>You’re in! Check your inbox.</div>
-            </div>
+      <div class="modal-dialog__title">Welcome home</div>
+      <div class="modal-dialog__text-wrap">
+        <div class="modal-dialog__text">Unlock early access to daybreaker’s first membership club.</div>
+        <div class="modal-dialog__text">Mischief awaits, open the door...</div>
+      </div>
+      <div class="modal-dialog-form">
+        <form action="" id="email-form">
+          <input required type="email" class="modal-dialog-form__email-input" tabindex="1" placeholder="Enter your email">
+          <input type="hidden" name="g" value="">
+          <input type="hidden" name="$fields" value="user_city,user_ip,signup_location">
+          <input type="hidden" name="user_city" value="">
+          <input type="hidden" name="user_ip" value="">
+          <input type="hidden" name="signup_location" value="">
+          <div class="modal-dialog-form__button-container">
+            <button type="submit" class="button button--bordered modal-dialog-form__button" role="button" tabindex="2">Join the waitlist</button>
+          </div>
+        </form>
+        <div id="subscribe-successful_hub" style="display: none;" class="modal-dialog-form__success-message">
+          <div>You’re in! Check your inbox.</div>
         </div>
       </div>
-  </div>
-
+    </div>
   </div>
   <div class="loading-overlay" id="loading-overlay_hub">
     <img src="static/img/daybreaker-logo.svg" alt="loading">
