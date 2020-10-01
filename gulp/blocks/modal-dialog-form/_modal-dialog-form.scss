@@ -30,6 +30,10 @@
       text-transform: uppercase;
       letter-spacing: 1.8px;
     }
+    
+    &:focus::placeholder{
+        color: transparent;
+    }
   }
 
   &__email-input:focus {
@@ -63,14 +67,6 @@
     &:hover {
       background-color: $color-main;
       color: $color-black;
-    }
-
-    &:active,
-    &:focus {
-      color: $color-black;
-      background-color: $color-white;
-      border-color: $color-white;
-      outline: none;
     }
   }
 

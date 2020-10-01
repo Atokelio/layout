@@ -132,6 +132,16 @@ a {
       font-size: 16px;
       text-transform: uppercase;
       letter-spacing: 1.8px; }
+    .modal-dialog-form__email-input:focus::-webkit-input-placeholder {
+      color: transparent; }
+    .modal-dialog-form__email-input:focus::-moz-placeholder {
+      color: transparent; }
+    .modal-dialog-form__email-input:focus:-ms-input-placeholder {
+      color: transparent; }
+    .modal-dialog-form__email-input:focus::-ms-input-placeholder {
+      color: transparent; }
+    .modal-dialog-form__email-input:focus::placeholder {
+      color: transparent; }
   .modal-dialog-form__email-input:focus {
     border: none;
     border-bottom: 2px solid #fff;
@@ -159,11 +169,6 @@ a {
     .modal-dialog-form__button:hover {
       background-color: #a0ffde;
       color: #000; }
-    .modal-dialog-form__button:active, .modal-dialog-form__button:focus {
-      color: #000;
-      background-color: #fff;
-      border-color: #fff;
-      outline: none; }
   .modal-dialog-form__button.active {
     color: #fff;
     background-color: transparent;
