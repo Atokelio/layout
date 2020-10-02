@@ -73,11 +73,8 @@ $(document).ready(function () {
 
     $('#email-form').submit(function () {
         setSuccessfulSubscribed(true)
-        $('#modal-button_hub').addClass('active')
-    })
-
-    $('#modal-button_hub').focusout(function () {
-        $('#modal-button_hub').removeClass('active')
+        setElementDisplaying(false,'modal-email-input')
+        setElementDisplaying(false,'modal-button_hub')
     })
 
 })
