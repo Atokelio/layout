@@ -94,7 +94,8 @@ a {
   margin: 0 auto; }
   @media (min-width: 992px) {
     .modal-dialog-form {
-      max-width: 360px; } }
+      max-width: 360px;
+      min-height: 150px; } }
   .modal-dialog-form__email-input {
     font-family: inherit;
     width: 100%;
