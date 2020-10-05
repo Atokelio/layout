@@ -177,16 +177,22 @@ a {
     position: absolute;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    bottom: -5px;
+    top: 0;
     left: 50%;
+    width: 220px;
     color: #fff;
-    font-size: 12px;
+    font-size: 16px;
+    line-height: 24px;
     text-transform: uppercase;
     text-align: center;
-    white-space: nowrap;
+    white-space: normal;
     font-style: italic;
     font-weight: bold;
     letter-spacing: 1.5px; }
+    @media (min-width: 992px) {
+      .modal-dialog-form__success-message {
+        width: 360px;
+        white-space: nowrap; } }
 
 .social {
   display: -webkit-box;
